@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<!-- 1) Baseado no exemplo da aula "Praticando um pouco - Percorrendo e listando itens de
+Arrays", implemente a mesma solução, porém utilizando o comando for.
+2) Baseado no exemplo da aula "Praticando um pouco - Criando uma tabuada de 1 a 10
+(laços encadeados)", implemente a mesma solução, porém utilizando o comando while. -->
+
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript</title>
+
+    <script>
+        var nomes = ['Ana', 'João', 'Maria', 'José']
+        document.write('<h1>Questão 1</h1>')
+        document.write('<h2>Nomes:</h2>')
+        for (var x in nomes) {
+            document.write(nomes[x] + '<br>')
+        }
+        document.write('<hr>')
+        document.write('<h1>Questão 2</h1>')
+        document.write('<h2>Tabuada</h2>')
+        document.write('<hr>')
+        var x = 1
+        while (x <= 10) {
+            var y = 1
+            while (y <= 10) {
+                document.write(x + 'x' + y + '=' + (x * y) + '<br>')
+                y++
+            }
+            document.write('<hr>')
+            x++
+        }
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>
