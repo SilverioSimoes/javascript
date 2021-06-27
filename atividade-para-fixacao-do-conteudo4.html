@@ -32,7 +32,7 @@ Efetuar um console.log do Array para debug (checar se está funcionado). -->
     <title>JavaScript</title>
 
     <script>
-        var objetos = Array('Cadeira', 'Impressora', 'Garfo')
+        var lista_de_objetos = Array('Cadeira', 'Impressora', 'Garfo')
         function adicionarObjetos() {
             //recupera o valor inserido no campo id objeto
             var objeto = document.getElementById('objeto').value
@@ -40,12 +40,12 @@ Efetuar um console.log do Array para debug (checar se está funcionado). -->
             if (objeto != '') {
                 //verifica se o valor já não foi inserido anteriormente
                 //se sim, informa que valor já existe, se não insere novo valor
-                if (objetos.indexOf(objeto) !== -1) {
+                if (lista_de_objetos.indexOf(objeto) !== -1) {
                     alert('Objeto já foi adicionado')
                 }
                 else {
-                    objetos.push(objeto)
-                    console.log(objetos)
+                    lista_de_objetos.push(objeto)
+                    console.log(lista_de_objetos)
                     document.getElementById('objeto').value = ''
                 }
             }
@@ -54,9 +54,29 @@ Efetuar um console.log do Array para debug (checar se está funcionado). -->
             }
         }
         function ordenarObjetos() {
-            objetos.sort()
-            console.log(objetos)
+            lista_de_objetos.sort()
+            console.log(lista_de_objetos)
         }
+
+        function removerObjetos() {
+            var objeto = document.getElementById('objeto').value
+            if (objeto !== '') {
+                if (lista_de_objetos.includes(objeto) === true) {
+                    lista_de_objetos.pop(objeto)
+                    document.getElementById('objeto').value = ''
+                    alert('Objeto já foi removido')
+                }
+                else {
+                    console.log(lista_de_objetos)
+                    document.getElementById('objeto').value = ''
+                    alert('O objeto não está na lista')
+                }
+            } console.log(lista_de_objetos)
+        }
+        function listarObjetos() {
+            alert(lista_de_objetos)
+        } console.log(lista_de_objetos)
+
     </script>
 
 </head>
@@ -65,6 +85,8 @@ Efetuar um console.log do Array para debug (checar se está funcionado). -->
     <input type="text" id="objeto" />
     <button onclick="adicionarObjetos()">Adicionar</button>
     <button onclick="ordenarObjetos()">Ordenar</button>
+    <button onclick="removerObjetos()">Remover</button>
+    <button onclick="listarObjetos()">Listar</button>
 </body>
 
 </html>
