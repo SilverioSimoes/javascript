@@ -7,18 +7,20 @@
   <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 
   <script type="text/babel">
-  //destructuring
+    //destructuring
 
-  let frutas = ['Abacaxi', 'Uva', 'Pera', 'Mamão']
+    let frutas = ['Abacaxi', 'Uva', 'Pera', 'Mamão']
 
-  //let [a, b, , c] = frutas //pular um indice
-  let [a, b = 'Abacate', c, d, e = 'Banana'] = frutas
+    //let [a, b, , c] = frutas //pular um indice
+    let [a, b = 'Abacate', c, d, e = 'Banana'] = frutas
 
-  //console.log(a,b,c,d,e)
-  let coisas = [['Abacaxi', 'Uva', 'Pera', 'Mamão'], ['José', 'Maria']]
-  let [,[,n2]] = coisas
+    //console.log(a,b,c,d,e)
+    let coisas = [['Abacaxi', 'Uva', 'Pera', 'Mamão'], ['José', 'Maria']]
+    let [, [, n2]] = coisas
+    let [[, , n3]] = coisas
 
-  console.log(n2)
+    console.log(n2)
+    console.log(n3)
   </script>
 
 </head>
