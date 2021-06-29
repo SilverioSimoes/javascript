@@ -1,108 +1,111 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title></title>
 
-    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+<head>
+  <title></title>
 
-    <script type="text/babel">
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 
-      let Carro = function() {
-        this.cor = 'Amarelo'
-        this.modelo = 'Chevette'
-        this.velocidadeAtual = 0
-        this.velocidadeMaxima = 180
+  <script type="text/babel">
 
-        this.acelerar = function() {
-          let velocidade = this.getVelocidadeAtual() + 50
-          if(velocidade > this.velocidadeMaxima) {
-            velocidade = this.velocidadeMaxima
-          }
-          this.setVelocidadeAtual(velocidade)
+    let Carro = function () {
+      this.cor = 'Amarelo'
+      this.modelo = 'Chevette'
+      this.velocidadeAtual = 0
+      this.velocidadeMaxima = 180
+
+      this.acelerar = function () {
+        let velocidade = this.getVelocidadeAtual() + 50
+        if (velocidade > this.velocidadeMaxima) {
+          velocidade = this.velocidadeMaxima
         }
-
-        this.getVelocidadeAtual = function() {
-          return this.velocidadeAtual
-        }
-
-        this.setVelocidadeAtual = function(velocidadeAtual) {
-          this.velocidadeAtual = velocidadeAtual
-        }
+        this.setVelocidadeAtual(velocidade)
       }
 
-      let carro = new Carro()
-      console.log(carro.velocidadeAtual)
-      carro.acelerar()
-      console.log(carro.velocidadeAtual)
-      carro.acelerar()
-      console.log(carro.velocidadeAtual)
-      carro.acelerar()
-      console.log(carro.velocidadeAtual)
-      carro.acelerar()
-      console.log(carro.velocidadeAtual)
-      carro.velocidadeMaxima = 280
-      carro.acelerar()
-      console.log(carro.velocidadeAtual)
-
-
-
-
-      let Carro2 = function() {
-        
-        var velocidadeMaxima = 180
-        var quilometrosRodados = 0
-
-        this.cor = 'Amarelo'
-        this.modelo = 'Chevette'
-        this.velocidadeAtual = 0
-        
-
-        this.acelerar = function() {
-          let velocidade = this.getVelocidadeAtual() + 50
-          if(velocidade > velocidadeMaxima) {
-            velocidade = velocidadeMaxima
-          }
-          this.setVelocidadeAtual(velocidade)
-
-          setQuilometrosRodados(0.07)
-          console.log(quilometrosRodados)
-        }
-
-        this.getVelocidadeAtual = function() {
-          return this.velocidadeAtual
-        }
-
-        this.setVelocidadeAtual = function(velocidadeAtual) {
-          this.velocidadeAtual = velocidadeAtual
-        }
-
-        var setQuilometrosRodados = function(q) {
-          quilometrosRodados += q
-        }
+      this.getVelocidadeAtual = function () {
+        return this.velocidadeAtual
       }
 
-      let carro2 = new Carro2()
-      console.log(carro2.velocidadeAtual)
-      carro2.acelerar()
-      console.log(carro2.velocidadeAtual)
-      carro2.acelerar()
-      console.log(carro2.velocidadeAtual)
-      carro2.acelerar()
-      console.log(carro2.velocidadeAtual)
-      carro2.acelerar()
-      console.log(carro2.velocidadeAtual)
-      //carro2.velocidadeMaxima = 280
-      carro2.acelerar()
-      console.log(carro2.velocidadeAtual)
+      this.setVelocidadeAtual = function (velocidadeAtual) {
+        this.velocidadeAtual = velocidadeAtual
+      }
+    }
 
-      console.log(carro)
-      console.log(carro2)
+    let carro = new Carro()
+    console.log(carro.velocidadeAtual)
+    carro.acelerar()
+    console.log(carro.velocidadeAtual)
+    carro.acelerar()
+    console.log(carro.velocidadeAtual)
+    carro.acelerar()
+    console.log(carro.velocidadeAtual)
+    carro.acelerar()
+    console.log(carro.velocidadeAtual)
+    carro.velocidadeMaxima = 280
+    carro.acelerar()
+    console.log(carro.velocidadeAtual)
 
 
-    </script>
-    
-  </head>
-  <body>
-    
-  </body>
+
+
+    let Carro2 = function () {
+
+      const velocidadeMaxima = 180
+      var quilometrosRodados = 0
+
+      this.cor = 'Amarelo'
+      this.modelo = 'Chevette'
+      this.velocidadeAtual = 0
+
+
+      this.acelerar = function () {
+        let velocidade = this.getVelocidadeAtual() + 50
+        if (velocidade > velocidadeMaxima) {
+          velocidade = velocidadeMaxima
+        }
+        this.setVelocidadeAtual(velocidade)
+
+        setQuilometrosRodados(0.07)
+        console.log(quilometrosRodados)
+      }
+
+      this.getVelocidadeAtual = function () {
+        return this.velocidadeAtual
+      }
+
+      this.setVelocidadeAtual = function (velocidadeAtual) {
+        this.velocidadeAtual = velocidadeAtual
+      }
+
+      var setQuilometrosRodados = function (q) {
+        quilometrosRodados += q
+      }
+    }
+
+    let carro2 = new Carro2()
+    console.log(carro2.velocidadeAtual)
+    carro2.acelerar()
+    console.log(carro2.velocidadeAtual)
+    carro2.acelerar()
+    console.log(carro2.velocidadeAtual)
+    carro2.acelerar()
+    console.log(carro2.velocidadeAtual)
+    carro2.acelerar()
+    console.log(carro2.velocidadeAtual)
+    //carro2.velocidadeMaxima = 280
+    carro2.acelerar()
+    console.log(carro2.velocidadeAtual)
+
+    console.log(carro)
+    console.log(carro2)
+
+
+  </script>
+
+</head>
+
+<body>
+
+</body>
+
 </html>
