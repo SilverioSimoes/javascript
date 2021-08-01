@@ -12,17 +12,46 @@
 <body>
     <script type="text/babel">
 
-        function getMultiplier(multiplier) {
-            return function (aNumber) {
-                return aNumber * multiplier
-            }
-        }
 
-        const double = getMultiplier(2)
-        const triple = getMultiplier(3)
-        const quadruple = getMultiplier(4)
 
-        console.log(double(8))
+
+        //        const getMultiplier = multiplier => aNumber => aNumber * multiplier
+        //
+        //        const double = getMultiplier(2)
+        //        const triple = getMultiplier(3)
+        //        const quadruple = getMultiplier(4)
+        //
+        //        console.log(double(8))
+
+
+        const randomNumbers = [36, 99, 37, 63]
+
+        const numberGreaterThan37 = randomNumbers.filter(item => item > 37)
+
+        console.log(numberGreaterThan37)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     </script>
 </body>
